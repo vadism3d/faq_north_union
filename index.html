@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FAQ Сотрудников</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>FAQ North Union</h1>
+    </header>
+    <main>
+      <div class="accordion">  
+        <div class="accordion-item">
+          <div class="accordion-title">
+            <h2>Интеграция с Evarad</h2>
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>
+                Выгрузить архив с файлами необходимыми для интеграции с ПП Evarad >>>
+               <a href="https://drive.google.com/file/d/1LTwJ08xecilcqQ7BVgcXzwNHDshMncuW/view?usp=share_link" target="_blank">Архив</a>
+              </li>
+              <li>
+                Скопировать или переместить все файлы КРОМЕ ФАЙЛА "subscribe1.php" из архива в папку с нужным прелендом
+              </li>
+              <li>
+                Из файла <code>subscribe1.php</code> который у вас уже был в папке с прелендом нужно забрать участок кода включающий в себя контент внутри тега 
+                <code> div </code> с классом <code>content</code><br>
+                <img src="./img/code.png" alt="" style="width: 20%;"> <br>
+                и вставить этот участок кода в файл <code>subscribe1.php</code> который был в архиве , только после этого можно перенести <code>subscribe1.php</code> из архива в вашу папку с прелендом
+              </li>
+              <li>
+                Найти тег <code>form</code> который отвечает за форму приема данных, в атрибуте <code>action</code> необходимо прописать <code>send.php</code>
+              </li>
+              <li>
+                Так же с формы необходимо удалить не нужные инпуты , кроме тех что отвечают за ввод данных, и добавить следущие 4 инпута 
+                <br>
+                <img src="./img/code1.png" alt="" style="width: 50%;">
+              </li>
+              <li>В инпуте с атрибутом <code>name="country"</code> необходимо вставить код страны на которую сделан преленд</li>
+              <li>В инпуте с атрибутом <code>name="compaihn_id"</code> необходимо вставть <code>id</code> компании на которую будет литься трафик</li>
+              <li>В файле <code>send.php</code> так же необходимо заменить значение в <code>$campaign_id</code> на нужное</li><br>
+              <img src="./img/code2.png" alt="" style="width: 20%;">
+              <li>Теперь можно менять расширение файла <code>index.html</code> на <code>index.php</code> и загружать архив в <strong>Keitaro</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">
+            <h2>Интеграция с </h2>
+          </div>
+          <div class="accordion-content">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+                  
